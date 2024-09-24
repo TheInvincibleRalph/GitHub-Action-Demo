@@ -22,4 +22,6 @@ jobs:
       run: npm test
 
     - name: Use secret
-      run: echo ${{ secrets.MY_SECRET }}
+      run: echo $MY_SECRET
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
