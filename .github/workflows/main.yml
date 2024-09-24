@@ -15,6 +15,9 @@ jobs:
         with:
           node-version: '16'  # You can also use '18' or '20', depending on your project requirements
 
+      - name: List files
+        run: ls -la
+
       - name: Install dependencies
         run: npm install
 
