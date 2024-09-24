@@ -7,21 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3  # Upgrade to v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3  # Upgrade to v3
+        with:
+          node-version: '16'  # You can also use '18' or '20', depending on your project requirements
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: npm test
+      - name: Run tests
+        run: npm test
 
-    - name: Use secret
-      run: echo $MY_SECRET
-      env:
-        MY_SECRET: ${{ secrets.MY_SECRET }}
+      - name: Use secret
+        run: echo ${{ secrets.MY_SECRET }}
