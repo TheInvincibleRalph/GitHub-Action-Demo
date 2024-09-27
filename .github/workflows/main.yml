@@ -8,12 +8,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Upgrade to v3
+        uses: actions/checkout@v3  
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3  # Upgrade to v3
+        uses: actions/setup-node@v3 
         with:
-          node-version: '16'  # You can also use '18' or '20', depending on your project requirements
+          node-version: '16'  
 
       - name: List files
         run: ls -la
